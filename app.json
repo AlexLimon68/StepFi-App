@@ -4,31 +4,31 @@
     "slug": "stepfi-app",
     "scheme": "stepfi",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
       "output": "single"
     },
-
     "experiments": {
       "tsconfigPaths": true,
       "typedRoutes": true
     },
-
-    "plugins": ["expo-router", "expo-secure-store"],
-
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#080F1A"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -37,7 +37,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#080F1A"
       },
-      "softwareKeyboardLayoutMode": "pan"
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.itighiseemmanuel.stepfiapp"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3f17b085-047b-4ad2-9671-8aca3128f440"
+      }
     }
   }
 }
