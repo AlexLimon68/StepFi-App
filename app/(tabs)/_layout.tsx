@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Home, CreditCard, Calendar, Star, Settings } from 'lucide-react-native';
+import { Home, CreditCard, Calendar, Star, Settings, Calculator } from 'lucide-react-native';
 import { colors } from '../../constants/colors';
 import { useTranslation } from '../../hooks/useTranslation';
 
@@ -41,11 +41,19 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="calendar"
-        options={{
-          title: t('tabs.calendar'),
-          tabBarIcon: ({ color, size }) => <Calendar color={color} size={size} />,
-        }}
+  name="simulate"
+  options={{
+    title: 'Simulate',
+    tabBarIcon: ({ color, size }) => <Calculator color={color} size={size} />,
+  }}
+/>
+<Tabs.Screen
+  name="calendar"
+  options={{
+    title: t('tabs.calendar'),
+    tabBarIcon: ({ color, size }) => <Calendar color={color} size={size} />,
+  }}
+/>
       />
       <Tabs.Screen
         name="reputation"
